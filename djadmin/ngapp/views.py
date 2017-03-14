@@ -41,3 +41,15 @@ def login(request):
                           "admin.permission": ["manage.permissions"]}, "userRole": []}
     }
     return HttpResponse(json.dumps(response_data), content_type="application/json")
+
+
+def me(request):
+    # TODO: hardcoded login response, need to be rewritten to use following:
+    # - get user info
+    response_data = {
+        "errors": False,
+        "data": {"id": 2, "name": "Damjan", "email": "gnu_d@freedom.local", "avatar": None, "email_verified": "1",
+                 "email_verification_code": "715wUmo6EpY6Q30yv4ZXpv7mf6Hto2LxFfUFwCXI",
+                 "created_at": "2016-12-17 16:07:08", "updated_at": "2016-12-17 16:07:08"}
+    }
+    return HttpResponse(json.dumps(response_data), content_type="application/json")
