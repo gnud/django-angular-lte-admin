@@ -1,16 +1,16 @@
 {
     "js": {
-        "outputFolder": "public/js"
+        "outputFolder": "djadmin/djadmin/static/js"
     },
     "css": {
-        "outputFolder": "public/css",
+        "outputFolder": "djadmin/djadmin/static/css",
         "sass": {
             "folder": "../../angular/"
         },
         "lteSkin": "skin-blue.css"
     },
     "fonts": {
-        "outputFolder": "public/fonts"
+        "outputFolder": "djadmin/djadmin/static/fonts"
     },
-    "buildPath": "public/build"
+    "buildPath": "djadmin/djadmin/static/build"
 }

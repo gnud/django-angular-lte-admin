@@ -28,18 +28,18 @@ elixir(function (mix) {
   var buildPath = config.buildPath
 
   var assets = [
-      'public/js/final.js',
-      'public/css/final.css'
+      'djadmin/djadmin/static/js/final.js',
+      'djadmin/djadmin/static/css/final.css'
     ],
     scripts = [
-      './public/js/vendor.js',
-      './public/js/partials.js',
-      './public/js/app.js',
-      './public/dist/js/app.js'
+      './djadmin/djadmin/static/js/vendor.js',
+      './djadmin/djadmin/static/js/partials.js',
+      './djadmin/djadmin/static/js/app.js',
+      './djadmin/djadmin/static/dist/js/app.js'
     ],
     styles = [
-      './public/css/vendor.css',
-      './public/css/app.css'
+      './djadmin/djadmin/static/css/vendor.css',
+      './djadmin/djadmin/static/css/app.css'
     ],
     karmaJsDir = [
       jsOutputFolder + '/vendor.js',
@@ -55,8 +55,8 @@ elixir(function (mix) {
     .angular('./angular/')
     .ngHtml2Js('./angular/**/*.html')
     .concatScripts(scripts, 'final.js')
-    .sass('./angular/**/*.scss', 'public/css')
-    .styles(styles, './public/css/final.css')
+    .sass('./angular/**/*.scss', 'djadmin/djadmin/static/css')
+    .styles(styles, './djadmin/djadmin/static/css/final.css')
     .version(assets)
     .browserSync({
       proxy: 'localhost:8000'
