@@ -1,6 +1,6 @@
-# Laravel Angular Admin
-Laravel + Angularjs + Bootstrap + AdminLTE binded by Gulp workflow Admin Dashboard Boilerplate.
-Plus Oauth and JWT authentication on the side.
+# Django Angular Admin
+Django + Angularjs + Bootstrap + AdminLTE binded by Gulp workflow Admin Dashboard Boilerplate.
+Plus Oauth and JWT authentication on the side. (TODO)
 
 [![Build Status](https://travis-ci.org/silverbux/laravel-angular-admin.svg?branch=master)](https://travis-ci.org/silverbux/laravel-angular-admin)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
@@ -28,14 +28,14 @@ Plus Oauth and JWT authentication on the side.
 
 ## Installation
 ```
-$ composer install && npm install
+$ npm install
 ```
 
 Open ```.env``` and enter necessary config for DB and Oauth Providers Settings.
 
 ```
-$ php artisan migrate
-$ php artisan db:seed
+$ python manage.py migrate
+$ php artisan db:seed (TODO)
 ```
 
 ## Work Flow
@@ -43,7 +43,7 @@ $ php artisan db:seed
 **General Workflow**
 
 ```
-$ php artisan serve --host=0
+$ python manage.py runserver 8002
 ```
 Open new terminal
 ```
@@ -52,7 +52,7 @@ $ gulp && gulp watch
 
 > Default Username/Password: admin@example.com / password
 
-**Angular Generators**
+**Angular Generators** (TODO)
 
 ```
 $ artisan ng:page name       #New page inside angular/app/pages/
@@ -62,7 +62,7 @@ $ artisan ng:service name    #New service inside angular/services/
 $ artisan ng:filter name     #New filter inside angular/filters/
 $ artisan ng:config name     #New config inside angular/config/
 ```
-[Laravel Angular Generator] (https://github.com/jadjoubran/laravel-ng-artisan-generators)
+[Laravel Angular Generator] (https://github.com/jadjoubran/laravel-ng-artisan-generators) (TODO: replace them with Django commands)
 
 #### [Read Full Documentation] (http://silverbux.github.io/laravel-angular-admin)
 
@@ -80,7 +80,8 @@ You need help customizing? You have an awesome project and you need to hire a co
     * [Angular ACL] (https://github.com/mikemclin/angular-acl)
 
 ## Built With
-* [Laravel] (http://laravel.com)
+* [Django] (https://www.djangoproject.com)
+* [Laravel] (http://laravel.com) (TODO: remove it)
 * [Angularjs] (https://angularjs.org)
 * [Twitter Bootstrap] (https://getbootstrap.com)
 * [Composer] (https://getcomposer.org/)
@@ -88,7 +89,7 @@ You need help customizing? You have an awesome project and you need to hire a co
 * [BOWER] (http://bower.io/)
 * [NPM] (https://www.npmjs.com/)
 
-## Deploy to heroku
+## Deploy to heroku (TODO)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
@@ -98,11 +99,11 @@ You need help customizing? You have an awesome project and you need to hire a co
 4. Set necessary config for DB based from CLEARDB_DATABASE_URL or from your custom database
 5. Execute migration and db seed with the following commands
 
-**Database Migration**
+**Database Migration** (TODO)
 ```
 $ heroku run php artisan migrate --app your_app_name
 ```
-**Database Seeds**
+**Database Seeds**  (TODO)
 ```
 $ heroku run php artisan migrate --app your_app_name
 ```
