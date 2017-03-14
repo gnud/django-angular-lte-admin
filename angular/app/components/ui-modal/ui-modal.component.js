@@ -104,7 +104,7 @@ class UiModalController {
     swal({
       title: 'Sweet!',
       text: "Here's a custom image.",
-      imageUrl: '/img/avatar5.png'
+      imageUrl: '/static/img/avatar5.png'
     })
   }
 
