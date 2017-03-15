@@ -42,6 +42,12 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
+JWT_AUTH = {
+    'JWT_RESPONSE_PAYLOAD_HANDLER':
+    #'rest_framework_jwt.utils.jwt_response_payload_handler',
+    'ngapp.views.jwt_response_payload_handler',
+}
+
 
 # Application definition
 
