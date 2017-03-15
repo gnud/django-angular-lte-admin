@@ -19,10 +19,20 @@ from django.conf import settings
 from django.conf.urls.static import static
 import os
 
+from django.conf.urls import url, include
+from rest_framework import routers
+from ngapp import views
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('ngapp.urls')),
 
+    url(r'^api/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
 print(settings.STATIC_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

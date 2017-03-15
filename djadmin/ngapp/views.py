@@ -1,6 +1,10 @@
 import json
 
 from django.http import HttpResponse
+from django.contrib.auth.models import User, Group
+from ngapp.serializers import UserSerializer, GroupSerializer
+from rest_framework import viewsets
+
 
 
 # Create your views here.
@@ -53,3 +57,19 @@ def me(request):
                  "created_at": "2016-12-17 16:07:08", "updated_at": "2016-12-17 16:07:08"}
     }
     return HttpResponse(json.dumps(response_data), content_type="application/json")
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = User.objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer
+
+
+class GroupViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
