@@ -1,13 +1,15 @@
 module.exports = function (config) {
+  var djangoPublicPath = "djadmin/djadmin/static"
+
   config.set({
     basePath: '',
     frameworks: ['browserify', 'jasmine'],
     files: [
-      'public/js/vendor.js',
+      djangoPublicPath + '/js/vendor.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'node_modules/ng-describe/dist/ng-describe.js',
-      'public/js/partials.js',
-      'public/js/app.js',
+      djangoPublicPath + '/js/partials.js',
+      djangoPublicPath + '/js/app.js',
       'tests/angular/**/*.spec.js'
     ],
     browsers: ['PhantomJS'],

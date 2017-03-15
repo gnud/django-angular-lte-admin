@@ -26,20 +26,22 @@ elixir(function (mix) {
   var cssOutputFolder = config.css.outputFolder
   var fontsOutputFolder = config.fonts.outputFolder
   var buildPath = config.buildPath
+  var djangoPublicPath = "djadmin/djadmin/static"
+  config.publicPath = djangoPublicPath // override Laravel elixir default public dir
 
   var assets = [
-      'djadmin/djadmin/static/js/final.js',
-      'djadmin/djadmin/static/css/final.css'
+      djangoPublicPath + '/js/final.js',
+      djangoPublicPath + '/css/final.css'
     ],
     scripts = [
-      './djadmin/djadmin/static/js/vendor.js',
-      './djadmin/djadmin/static/js/partials.js',
-      './djadmin/djadmin/static/js/app.js',
-      './djadmin/djadmin/static/dist/js/app.js'
+      './' + djangoPublicPath + '/js/vendor.js',
+      './' + djangoPublicPath + '/js/partials.js',
+      './' + djangoPublicPath + '/js/app.js',
+      './' + djangoPublicPath + '/dist/js/app.js'
     ],
     styles = [
-      './djadmin/djadmin/static/css/vendor.css',
-      './djadmin/djadmin/static/css/app.css'
+      './' + djangoPublicPath + '/css/vendor.css',
+      './' + djangoPublicPath + '/css/app.css'
     ],
     karmaJsDir = [
       jsOutputFolder + '/vendor.js',
@@ -55,8 +57,8 @@ elixir(function (mix) {
     .angular('./angular/')
     .ngHtml2Js('./angular/**/*.html')
     .concatScripts(scripts, 'final.js')
-    .sass('./angular/**/*.scss', 'djadmin/djadmin/static/css')
-    .styles(styles, './djadmin/djadmin/static/css/final.css')
+    .sass('./angular/**/*.scss', djangoPublicPath + '/css')
+    .styles(styles, './' + djangoPublicPath + '/css/final.css')
     .version(assets)
     .browserSync({
       proxy: 'localhost:8000'
