@@ -125,3 +125,5 @@ djenv/**
 # Output files of the minified css/js code
 final-*.css
 final-*.js
+
+db.sqlite3
