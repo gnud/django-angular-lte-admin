@@ -48,6 +48,8 @@ JWT_AUTH = {
     'ngapp.views.jwt_response_payload_handler',
 }
 
+AUTH_USER_MODEL = 'ngapp.User'
+
 
 # Application definition
 
